@@ -5,7 +5,8 @@ runs:
   steps:
     - run: echo "${{ github.action_repository || github.repository }}"
       shell: bash
-    - run: echo $GHAR
+      
+    - run: echo "${{ env.GHAR }}"
       env:
         GHAR: ${{ github.action_repository || github.repository }}
       shell: bash
