@@ -1,0 +1,11 @@
+name: 'My custom action'
+description: 'Be a composite action'
+runs:
+  using: "composite"
+  steps:
+    - run: echo "${{ github.action_repository || github.repository }}"
+      shell: bash
+    - run: echo $GHAR
+      env:
+        GHAR: ${{ github.action_repository || github.repository }}
+      shell: bash
