@@ -3,6 +3,10 @@ description: 'Be a composite action'
 runs:
   using: "composite"
   steps:
+    - uses: actions/checkout@v3
+      env:
+        VA: ${{ github.action_repository }}
+    
     - run: echo "${{ github.action_repository }}"
       shell: bash
       
