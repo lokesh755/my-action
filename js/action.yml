@@ -1,0 +1,5 @@
+name: 'Test Action'
+description: 'Be a JavaScript action'
+runs:
+  using: 'node16'
+  main: 'index.js'
