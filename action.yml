@@ -1,9 +1,0 @@
-name: 'My custom action'
-description: 'Be a composite action'
-runs:
-  using: "composite"
-  steps:
-    - run: echo ${{ github.action_repository }}
-      env:
-        GHAR: ${{ github.action_repository }}
-      shell: bash
