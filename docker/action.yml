@@ -1,0 +1,5 @@
+name: 'Docker Action'
+description: 'Be a custom Docker action'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
