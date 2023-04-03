@@ -1,4 +1,4 @@
-FROM postgres:14-alpine
+FROM alpine:3.10
 
 COPY fileone.txt /fileone.txt
 
