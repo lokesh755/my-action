@@ -13,5 +13,9 @@ RUN chown 1001  /fileone.txt \
     && chown 1001  /filetwo.txt \
     && chmod 770 /fileone.txt \
     && chmod 770 /filetwo.txt
+    
+RUN ls -la
 
 USER 1001
+
+RUN ls -la
