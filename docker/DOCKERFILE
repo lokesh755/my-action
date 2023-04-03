@@ -1,0 +1,6 @@
+FROM postgres:14-alpine
+
+COPY entrypoint.sh /entrypoint.sh
+COPY file.txt /file.txt
+
+ENTRYPOINT ["/entrypoint.sh"]
