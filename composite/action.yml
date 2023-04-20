@@ -3,10 +3,10 @@ description: 'Be a composite action'
 runs:
   using: "composite"
   steps:
-    - run: |
-        echo ${{ github.action_repository }}
-        echo ${{ github.action_ref }}
-      env:
+    - env:
         GHARep: ${{ github.action_repository }}
         GHARef: ${{ github.action_ref }}
+      run: |
+        echo ${{ github.action_repository }}
+        echo ${{ github.action_ref }}
       shell: bash
