@@ -4,9 +4,9 @@ runs:
   using: "composite"
   steps:
     - env:
-        GHARep: ${{ github.action_repository }}
-        GHARef: ${{ github.action_ref }}
+        GHARep: ${{ github.workflow }}
+        GHARef: ${{ github.ref }}
       run: |
-        echo ${{ env.GHARep }}
-        echo ${{ env.GHARef }}
+        echo ${{ github.workflow }}
+        echo ${{ github.ref }}
       shell: bash
