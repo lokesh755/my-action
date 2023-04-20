@@ -7,5 +7,5 @@ runs:
         GHARep: ${{ github.workflow }}
         GHARef: ${{ github.ref }}
       run: |
-        echo ${{ toJson(github)  }}
+        echo "${{ toJson(github) }}"
       shell: bash
