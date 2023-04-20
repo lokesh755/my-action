@@ -7,6 +7,6 @@ runs:
         GHARep: ${{ github.workflow }}
         GHARef: ${{ github.ref }}
       run: |
-        echo ${{ github.workflow }}
-        echo ${{ github.ref }}
+        echo ${{ env.JobName }}
+        echo ${{ env.GHARef }}
       shell: bash
