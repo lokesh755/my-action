@@ -1,11 +1,21 @@
 name: 'My custom action'
 description: 'Be a composite action'
+inputs:
+  action_repository:
+    description: 'Actions repo name'
+    required: true
+    default: 'anthms/myaction'
+  actions_ref:
+    description: 'Actions ref'
+    required: true
+    default: 'main'
 runs:
   using: "composite"
   steps:
     - env:
-        GHARep: ${{ github.workflow }}
-        GHARef: ${{ github.ref }}
+        GHARep: ${{ inputs.action_repository }}
+        GHARef: ${{ inputs.actions_ref }}
       run: |
-        echo "${{ toJson(github) }}"
+        echo ${{ inputs.action_repository }}
+        echo ${{ inputs.actions_ref }}
       shell: bash
